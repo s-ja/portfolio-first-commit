@@ -1,5 +1,11 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { BookOpen } from "lucide-react";
 
 const experiences = [
   {
@@ -32,15 +38,17 @@ const experiences = [
     organization: "한울직업전문학교",
     period: "2022.02.09 ~ 2022.07.20 (약 5개월)",
   },
-]
+];
 
 export function Experience() {
   return (
     <section className="py-24 bg-muted/30">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">수료 교육</h2>
-          <p className="mt-4 text-muted-foreground">프론트엔드 개발 역량 강화를 위한 교육 과정들</p>
+          <p className="mt-4 text-muted-foreground">
+            프론트엔드 개발 역량 강화를 위한 교육 과정들
+          </p>
         </div>
         <div className="mx-auto mt-16 max-w-4xl">
           <div className="grid gap-6 md:grid-cols-2">
@@ -52,13 +60,19 @@ export function Experience() {
                       <BookOpen className="h-4 w-4 text-primary-foreground" />
                     </div>
                     <div className="space-y-1">
-                      <CardTitle className="text-lg leading-tight">{experience.title}</CardTitle>
-                      <CardDescription>{experience.organization}</CardDescription>
+                      <CardTitle className="text-lg leading-tight">
+                        {experience.title}
+                      </CardTitle>
+                      <CardDescription>
+                        {experience.organization}
+                      </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{experience.period}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {experience.period}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -66,5 +80,5 @@ export function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,14 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import { ProjectImageSwiper } from "./project-image-swiper"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import { ProjectImageSwiper } from "./project-image-swiper";
 
 const projects = [
   {
@@ -35,7 +41,10 @@ const projects = [
     team: "3인",
     role: "팀 리더, 프론트엔드 개발",
     techStack: ["React", "TypeScript", "Emotion", "Tanstack Query", "Figma"],
-    images: ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+    images: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
     achievements: [
       "인증 시스템 구축: 토큰 만료 문제를 해결하기 위한 Axios Interceptor를 활용한 자동 갱신 시스템 구현",
       "디자인 시스템: Figma 기반 컴포넌트 및 UI 디자인, 재사용성을 고려한 개발 구조 설계",
@@ -67,15 +76,17 @@ const projects = [
     github: "https://github.com/pie-sfac/1-16-careMango",
     demo: null,
   },
-]
+];
 
 export function Projects() {
   return (
     <section className="py-24 bg-muted/30">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">주요 프로젝트</h2>
-          <p className="mt-4 text-muted-foreground">교육 과정에서 진행한 핵심 프로젝트들</p>
+          <p className="mt-4 text-muted-foreground">
+            교육 과정에서 진행한 핵심 프로젝트들
+          </p>
         </div>
         <div className="mx-auto mt-16 max-w-6xl space-y-16">
           {projects.map((project, index) => (
@@ -85,8 +96,12 @@ export function Projects() {
                   <CardHeader>
                     <div className="space-y-4">
                       <div className="space-y-2">
-                        <CardTitle className="text-2xl">{project.title}</CardTitle>
-                        <CardDescription className="text-lg">{project.subtitle}</CardDescription>
+                        <CardTitle className="text-2xl">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-lg">
+                          {project.subtitle}
+                        </CardDescription>
                         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                           <span>기간: {project.period}</span>
                           <span>팀 규모: {project.team}</span>
@@ -97,14 +112,22 @@ export function Projects() {
                       </div>
                       <div className="flex gap-2">
                         <Button variant="outline" size="sm" asChild>
-                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Github className="mr-2 h-4 w-4" />
                             GitHub
                           </a>
                         </Button>
                         {project.demo && (
                           <Button size="sm" asChild>
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Demo
                             </a>
@@ -127,18 +150,26 @@ export function Projects() {
                     <div>
                       <h4 className="mb-3 font-semibold">주요 성과</h4>
                       <ul className="space-y-2">
-                        {project.achievements.map((achievement, achievementIndex) => (
-                          <li key={achievementIndex} className="text-sm text-muted-foreground">
-                            • {achievement}
-                          </li>
-                        ))}
+                        {project.achievements.map(
+                          (achievement, achievementIndex) => (
+                            <li
+                              key={achievementIndex}
+                              className="text-sm text-muted-foreground"
+                            >
+                              • {achievement}
+                            </li>
+                          )
+                        )}
                       </ul>
                     </div>
                   </CardContent>
                 </div>
                 <div className="order-1 md:order-2">
                   <div className="h-full p-6">
-                    <ProjectImageSwiper images={project.images} projectName={project.title} />
+                    <ProjectImageSwiper
+                      images={project.images}
+                      projectName={project.title}
+                    />
                   </div>
                 </div>
               </div>
@@ -147,5 +178,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Users, Wrench } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Zap, Users, Wrench } from "lucide-react";
 
 const competencies = [
   {
@@ -31,15 +31,17 @@ const competencies = [
       "AI 활용 문제 해결: AI를 활용한 미습득 기술 영역에 대해서도 단계적으로 파악하여 문제를 해결",
     ],
   },
-]
+];
 
 export function CoreCompetencies() {
   return (
     <section className="py-24 bg-muted/30">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">핵심 역량</h2>
-          <p className="mt-4 text-muted-foreground">프론트엔드 개발자로서의 핵심 강점과 경험</p>
+          <p className="mt-4 text-muted-foreground">
+            프론트엔드 개발자로서의 핵심 강점과 경험
+          </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
           {competencies.map((competency, index) => (
@@ -55,7 +57,10 @@ export function CoreCompetencies() {
               <CardContent>
                 <ul className="space-y-2">
                   {competency.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-sm text-muted-foreground">
+                    <li
+                      key={itemIndex}
+                      className="text-sm text-muted-foreground"
+                    >
                       • {item}
                     </li>
                   ))}
@@ -66,5 +71,5 @@ export function CoreCompetencies() {
         </div>
       </div>
     </section>
-  )
+  );
 }

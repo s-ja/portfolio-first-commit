@@ -1,14 +1,26 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Award, Globe, Trophy } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award, Globe, Trophy } from "lucide-react";
 
 const certifications = [
   {
     category: "자격증",
     icon: Award,
     items: [
-      { name: "컴퓨터그래픽기능사", date: "2022.09", organization: "한국산업인력공단" },
-      { name: "GTQi(그래픽기술자격 일러스트) 1급", date: "2022.05", organization: "한국생산성본부" },
-      { name: "GTQ(그래픽기술자격) 1급", date: "2022.04", organization: "한국생산성본부" },
+      {
+        name: "컴퓨터그래픽기능사",
+        date: "2022.09",
+        organization: "한국산업인력공단",
+      },
+      {
+        name: "GTQi(그래픽기술자격 일러스트) 1급",
+        date: "2022.05",
+        organization: "한국생산성본부",
+      },
+      {
+        name: "GTQ(그래픽기술자격) 1급",
+        date: "2022.04",
+        organization: "한국생산성본부",
+      },
     ],
   },
   {
@@ -16,23 +28,35 @@ const certifications = [
     icon: Globe,
     items: [
       { name: "TOEIC", date: "2022.08", organization: "855점" },
-      { name: "TOEIC Speaking Test", date: "2021.12", organization: "140점/Intermediate High" },
+      {
+        name: "TOEIC Speaking Test",
+        date: "2021.12",
+        organization: "140점/Intermediate High",
+      },
     ],
   },
   {
     category: "수상",
     icon: Trophy,
-    items: [{ name: "참여 교육 우수 수료상", date: "2024.02", organization: "스나이퍼팩토리/웅진씽크빅/인사이드아웃" }],
+    items: [
+      {
+        name: "참여 교육 우수 수료상",
+        date: "2024.02",
+        organization: "스나이퍼팩토리/웅진씽크빅/인사이드아웃",
+      },
+    ],
   },
-]
+];
 
 export function Certifications() {
   return (
     <section className="py-24">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">자격/어학/수상</h2>
-          <p className="mt-4 text-muted-foreground">보유 자격증과 어학 능력, 수상 경력</p>
+          <p className="mt-4 text-muted-foreground">
+            보유 자격증과 어학 능력, 수상 경력
+          </p>
         </div>
         <div className="mx-auto mt-16 max-w-5xl">
           <div className="grid gap-8 md:grid-cols-3">
@@ -65,5 +89,5 @@ export function Certifications() {
         </div>
       </div>
     </section>
-  )
+  );
 }

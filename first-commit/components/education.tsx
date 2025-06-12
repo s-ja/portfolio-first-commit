@@ -1,10 +1,16 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { GraduationCap } from "lucide-react";
 
 export function Education() {
   return (
     <section className="py-24">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">학력</h2>
           <p className="mt-4 text-muted-foreground">교육 배경</p>
@@ -26,7 +32,9 @@ export function Education() {
               <div className="grid gap-2 text-sm">
                 <div className="flex justify-between">
                   <span className="font-medium">기간</span>
-                  <span className="text-muted-foreground">2015.03 ~ 2022.08 (졸업)</span>
+                  <span className="text-muted-foreground">
+                    2015.03 ~ 2022.08 (졸업)
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium">전공</span>
@@ -34,7 +42,9 @@ export function Education() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium">부전공</span>
-                  <span className="text-muted-foreground">SW융합콘텐츠전공</span>
+                  <span className="text-muted-foreground">
+                    SW융합콘텐츠전공
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium">학점</span>
@@ -46,5 +56,5 @@ export function Education() {
         </div>
       </div>
     </section>
-  )
+  );
 }
