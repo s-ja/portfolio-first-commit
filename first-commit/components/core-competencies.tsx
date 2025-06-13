@@ -40,7 +40,9 @@ export function CoreCompetencies() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">핵심 역량</h2>
           <p className="mt-4 text-muted-foreground">
-            프론트엔드 개발자로서의 핵심 강점과 경험
+            Core Competencies
+            <br />
+            프론트엔드 개발자로서 가지는 핵심 강점과 경험
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
