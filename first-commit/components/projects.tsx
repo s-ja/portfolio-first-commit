@@ -32,7 +32,7 @@ const projects = [
       "코드 리뷰: 1주 단위 스프린트 종료 후 병합 담당 및 PR 코드 리뷰 주도적 참여 (총 516개 커밋 기여)",
     ],
     github: "https://github.com/Mt-NextJs/linkle",
-    demo: null,
+    demo: "https://linkle-nine.vercel.app/",
   },
   {
     title: "MODI",
@@ -53,7 +53,7 @@ const projects = [
       "문서화: README 및 Wiki를 통한 개발 과정 및 기록 문서화, 개발 효율성 향상",
     ],
     github: "https://github.com/techitPlus-FE-team3/open_market_projerct",
-    demo: null,
+    demo: "https://ip3-modi.netlify.app/",
   },
   {
     title: "포인티",
@@ -85,7 +85,9 @@ export function Projects() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">주요 프로젝트</h2>
           <p className="mt-4 text-muted-foreground">
-            교육 과정에서 진행한 핵심 프로젝트들
+            Projects
+            <br />
+            이전 진행했던 핵심 프로젝트들
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-6xl space-y-16">
