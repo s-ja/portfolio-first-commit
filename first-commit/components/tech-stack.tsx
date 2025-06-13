@@ -34,9 +34,7 @@ export function TechStack() {
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight">기술 스택</h2>
-          <p className="mt-4 text-muted-foreground">
-            보유하고 있는 기술과 도구들
-          </p>
+          <p className="mt-4 text-muted-foreground">Tech Stacks</p>
         </div>
         <div className="mx-auto mt-16 max-w-4xl">
           <div className="grid gap-8 md:grid-cols-2">
