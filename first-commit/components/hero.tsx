@@ -5,10 +5,9 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const handleDownloadResume = () => {
-    // Create a simple resume download - in real implementation, you'd have an actual PDF file
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // You would need to add this file to your public folder
-    link.download = "안승지_이력서.pdf";
+    link.href = "/안승지_이력서_First Commit.md"; // in public folder
+    link.download = "안승지_이력서_First Commit.md";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
