@@ -11,6 +11,7 @@
 - **Phone**: 010-8642-8777
 - **Email**: dkstmdwl0615@naver.com
 - **GitHub**: [s-ja](https://github.com/s-ja)
+- **Portfolio**: [https://portfolio-first-commit.vercel.app/](https://portfolio-first-commit.vercel.app/)
 
 ---
 
