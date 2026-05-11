@@ -1,0 +1,50 @@
+# Vercel Web Analytics Installation
+
+Successfully installed and configured Vercel Web Analytics for this Next.js portfolio project.
+
+## Changes Made
+
+### 1. Installed @vercel/analytics package
+- Added `@vercel/analytics` version 2.0.1 to project dependencies
+- Used pnpm as the package manager (detected from existing pnpm-lock.yaml)
+- Command executed: `pnpm add @vercel/analytics`
+
+### 2. Updated app/layout.tsx
+- Added import statement: `import { Analytics } from "@vercel/analytics/next";`
+- Added `<Analytics />` component inside the ThemeProvider, right after the existing `<SpeedInsights />` component
+- Followed Next.js App Router pattern as specified in official Vercel documentation
+
+### 3. Updated lock files
+- Updated pnpm-lock.yaml with new dependency tree (279 packages added including transitive dependencies)
+- Updated package.json with @vercel/analytics dependency
+
+## Implementation Details
+
+**Framework**: Next.js 15.2.6 with App Router and TypeScript
+**Package Manager**: pnpm 10.33.0
+**Analytics Version**: @vercel/analytics@2.0.1
+
+The Analytics component was added to the root layout (`app/layout.tsx`) following the official Vercel documentation pattern for Next.js App Router applications. The component is placed alongside the existing SpeedInsights component within the ThemeProvider wrapper to ensure analytics tracking is available across all pages.
+
+## Verification
+
+✅ Build completed successfully with `pnpm run build`
+✅ No TypeScript errors
+✅ No build errors
+✅ Production optimization completed successfully
+✅ All static pages generated correctly (4/4 pages)
+
+## Next Steps
+
+After deployment to Vercel:
+1. Navigate to the project's Analytics section in the Vercel dashboard
+2. Click the "Enable" button to activate Web Analytics
+3. Verify installation by checking browser Network tab for requests to the analytics endpoint
+4. Access analytics data through the Vercel dashboard
+
+## Notes
+
+- The implementation follows the exact pattern documented at https://vercel.com/docs/analytics/quickstart
+- Analytics component is automatically optimized for production builds
+- No additional configuration required - the component works out of the box
+- Analytics will only send data when deployed on Vercel (not in local development by default)
