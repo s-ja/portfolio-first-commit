@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "First Commit - 새로운 시작",
-  description: "프론트엔드 개발자 안승지의 포트폴리오입니다.",
+  description: "포트폴리오: 프론트엔드 개발자 안승지 입니다.",
 };
 
 export default function RootLayout({
