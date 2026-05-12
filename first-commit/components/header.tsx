@@ -25,24 +25,16 @@ export function Header() {
   if (!mounted) return null;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:px-10">
       <div className="container flex h-16 items-center justify-between mx-auto">
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-col justify-start items-start">
           <h1 className="text-xl font-bold">First Commit</h1>
           <span className="text-sm text-muted-foreground">새로운 시작</span>
         </div>
         <nav className="flex items-center space-x-2">
-          <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
-            <Download className="h-4 w-4" />
-          </Button>
           <Button variant="ghost" size="sm" asChild>
             <a href="mailto:dkstmdwl0615@naver.com">
               <Mail className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <a href="tel:010-8642-8777">
-              <Phone className="h-4 w-4" />
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild>
