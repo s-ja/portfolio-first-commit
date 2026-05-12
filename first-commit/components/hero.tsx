@@ -1,13 +1,13 @@
 "use client";
 
-import { Github, Mail, Download } from "lucide-react";
+import { Mail, Download, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/안승지_이력서_First Commit.md"; // in public folder
-    link.download = "안승지_이력서_First Commit.md";
+    link.href = "/안승지_이력서_First Commit.pdf"; // in public folder
+    link.download = "안승지_이력서_First Commit.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -20,10 +20,10 @@ export function Hero() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             안승지
           </h1>
-          <p className="mt-4 text-xl text-muted-foreground">
-            Seung ji, An
+          <p className="text-sm text-muted-foreground mt-4">
+            Frontend Developer | 프론트엔드 개발자
             <br />
-            Web Frontend Developer
+            React | Next.js | TypeScript
           </p>
           <div className="mt-8 space-y-4">
             <p className="text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export function Hero() {
             <Button asChild>
               <a href="mailto:dkstmdwl0615@naver.com">
                 <Mail className="mr-2 h-4 w-4" />
-                ansj8777@gmail.com
+                Email
               </a>
             </Button>
             <Button variant="outline" asChild>
@@ -70,12 +70,12 @@ export function Hero() {
                 rel="noopener noreferrer"
               >
                 <Github className="mr-2 h-4 w-4" />
-                GitHub Account
+                GitHub
               </a>
             </Button>
             <Button variant="outline" onClick={handleDownloadResume}>
               <Download className="mr-2 h-4 w-4" />
-              이력서.md
+              이력서.pdf
             </Button>
           </div>
         </div>
