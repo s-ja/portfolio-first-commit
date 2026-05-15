@@ -24,7 +24,9 @@ export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
 
@@ -59,23 +61,39 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="max-w-4xl space-y-6">
             <div className="flex flex-wrap items-center gap-2">
               <Badge>{project.type}</Badge>
-              <span className="text-sm text-muted-foreground">{project.period}</span>
-              <span className="text-sm text-muted-foreground">{project.team}</span>
+              <span className="text-sm text-muted-foreground">
+                {project.period}
+              </span>
+              <span className="text-sm text-muted-foreground">
+                {project.team}
+              </span>
             </div>
             <div>
-              <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{project.title}</h1>
-              <p className="mt-3 text-lg text-muted-foreground">{project.subtitle}</p>
+              <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+                {project.title}
+              </h1>
+              <p className="mt-3 text-lg text-muted-foreground">
+                {project.subtitle}
+              </p>
             </div>
-            <p className="max-w-3xl text-lg leading-relaxed">{project.summary}</p>
+            <p className="max-w-3xl text-lg leading-relaxed">
+              {project.summary}
+            </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
-                <Badge key={tech} variant="secondary">{tech}</Badge>
+                <Badge key={tech} variant="secondary">
+                  {tech}
+                </Badge>
               ))}
             </div>
             <div className="flex flex-wrap gap-2">
               {project.links.github && (
                 <Button variant="outline" asChild>
-                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github className="mr-2 h-4 w-4" />
                     GitHub
                   </a>
@@ -83,7 +101,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               )}
               {project.links.demo && (
                 <Button asChild>
-                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Demo
                   </a>
@@ -111,7 +133,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 <dt className="text-muted-foreground">키워드</dt>
                 <dd className="mt-2 flex flex-wrap gap-2">
                   {project.keywords.map((keyword) => (
-                    <Badge key={keyword} variant="outline">{keyword}</Badge>
+                    <Badge key={keyword} variant="outline">
+                      {keyword}
+                    </Badge>
                   ))}
                 </dd>
               </div>
@@ -138,7 +162,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-sm leading-relaxed text-muted-foreground">{content}</p>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {content}
+                      </p>
                     )}
                   </CardContent>
                 </Card>
