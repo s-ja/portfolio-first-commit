@@ -10,16 +10,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:px-10">
-      <div className="container mx-auto flex h-16 items-center justify-between">
-        <a href="#top" className="flex flex-col justify-start">
-          <span className="text-lg font-bold leading-none">First Commit</span>
-          <span className="mt-1 text-xs text-muted-foreground">
-            Frontend Portfolio
+      <div className="container flex h-16 items-center justify-between mx-auto">
+        <div className="flex flex-col justify-start items-start">
+          <h1 className="text-xl font-bold">Under Construction</h1>
+          <span className="text-sm text-muted-foreground">
+            보수중 입니다...!
           </span>
-        </a>
-        <nav className="flex items-center gap-1" aria-label="주요 링크">
-          <Button variant="ghost" size="icon" asChild>
-            <a href={`mailto:${contact.email}`} aria-label="Email">
+        </div>
+        <nav className="flex items-center space-x-2">
+          <Button variant="ghost" size="sm" asChild>
+            <a href="mailto:dkstmdwl0615@naver.com">
               <Mail className="h-4 w-4" />
             </a>
           </Button>

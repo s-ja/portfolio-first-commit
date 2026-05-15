@@ -9,8 +9,8 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio - First Commit",
-  description: "프론트엔드 개발자 안승지 포트폴리오",
+  title: "First Commit - 수정중...",
+  description: "포트폴리오: 프론트엔드 개발자 안승지 입니다.",
 };
 
 export default function RootLayout({
