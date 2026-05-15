@@ -13,7 +13,9 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a href="#top" className="flex flex-col justify-start">
           <span className="text-lg font-bold leading-none">First Commit</span>
-          <span className="mt-1 text-xs text-muted-foreground">Frontend Portfolio</span>
+          <span className="mt-1 text-xs text-muted-foreground">
+            Frontend Portfolio
+          </span>
         </a>
         <nav className="flex items-center gap-1" aria-label="주요 링크">
           <Button variant="ghost" size="icon" asChild>
@@ -22,7 +24,12 @@ export function Header() {
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <Github className="h-4 w-4" />
             </a>
           </Button>
@@ -32,7 +39,11 @@ export function Header() {
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             aria-label="테마 변경"
           >
-            {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+            {theme === "light" ? (
+              <Moon className="h-4 w-4" />
+            ) : (
+              <Sun className="h-4 w-4" />
+            )}
           </Button>
         </nav>
       </div>
