@@ -17,9 +17,16 @@ export function Hero() {
     <section className="py-24 md:py-32">
       <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          {/* <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             안승지
-          </h1>
+          </h1> */}
+          <h1>프론트엔드 개발자 안승지의 포트폴리오 입니다</h1>
+          <div>
+            <h2 className="tracking-tight text-muted-foreground sm:text-4xl">
+              Under Construction...
+            </h2>
+            <span className="text-sm text-muted-foreground">(보수중)</span>
+          </div>
           <p className="text-sm text-muted-foreground mt-4">
             Frontend Developer | 프론트엔드 개발자
             <br />

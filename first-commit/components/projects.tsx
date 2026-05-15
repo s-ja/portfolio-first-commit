@@ -160,20 +160,20 @@ export function Projects() {
                             >
                               • {achievement}
                             </li>
-                          )
+                          ),
                         )}
                       </ul>
                     </div>
                   </CardContent>
                 </div>
-                <div className="order-1 md:order-2">
+                {/* <div className="order-1 md:order-2">
                   <div className="h-full p-6">
                     <ProjectImageSwiper
                       images={project.images}
                       projectName={project.title}
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </Card>
           ))}
