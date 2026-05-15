@@ -1,15 +1,16 @@
-import { Award, GraduationCap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { contact, credentials, education } from "@/lib/portfolio-data";
+import { credentials, education } from "@/lib/portfolio-data";
+import { Award, GraduationCap } from "lucide-react";
 
 export function EducationAndCredentials() {
   return (
     <section className="bg-muted/30 py-20">
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">교육 및 자격</h2>
-          <p className="mt-4 text-muted-foreground">이력서 중복 정보 축소. 채용 검토에 필요한 보조 정보만 유지.</p>
+          <h2 className="text-3xl font-bold tracking-tight">
+            Education & Certifications
+          </h2>
+          <p className="mt-4 text-muted-foreground">교육 및 학력, 자격</p>
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
           <Card className="border-0 shadow-sm">
@@ -20,12 +21,16 @@ export function EducationAndCredentials() {
                 </div>
                 <div>
                   <CardTitle className="text-xl">{education.school}</CardTitle>
-                  <p className="mt-1 text-sm text-muted-foreground">{education.period}</p>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm leading-relaxed text-muted-foreground">{education.degree}</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {education.degree}
+              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {education.period}
+              </p>
             </CardContent>
           </Card>
           <Card className="border-0 shadow-sm">
@@ -36,7 +41,6 @@ export function EducationAndCredentials() {
                 </div>
                 <div>
                   <CardTitle className="text-xl">자격 / 어학 / 수상</CardTitle>
-                  <p className="mt-1 text-sm text-muted-foreground">요약 정보</p>
                 </div>
               </div>
             </CardHeader>
@@ -49,9 +53,6 @@ export function EducationAndCredentials() {
                   </li>
                 ))}
               </ul>
-              <Button variant="outline" size="sm" asChild>
-                <a href={contact.resume} download>자세한 이력은 Resume에서 확인</a>
-              </Button>
             </CardContent>
           </Card>
         </div>
