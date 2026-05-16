@@ -49,10 +49,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="min-h-screen">
-      <section className="border-b bg-muted/30 py-10 md:py-14">
-        <div className="container mx-auto">
-          <Button variant="ghost" asChild className="mb-8 px-0">
+    <main className="min-h-screen bg-background">
+      <section className="border-b bg-section-alt py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Button variant="ghost" asChild className="mb-8 -ml-2 px-2">
             <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
               메인으로 돌아가기
@@ -60,7 +60,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Button>
           <div className="max-w-4xl space-y-6">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge>{project.type}</Badge>
+              <Badge className="font-medium">{project.type}</Badge>
               <span className="text-sm text-muted-foreground">
                 {project.period}
               </span>
@@ -69,24 +69,24 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </span>
             </div>
             <div>
-              <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+              <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                 {project.title}
               </h1>
-              <p className="mt-3 text-lg text-muted-foreground">
+              <p className="mt-3 text-base text-muted-foreground md:text-lg">
                 {project.subtitle}
               </p>
             </div>
-            <p className="max-w-3xl text-lg leading-relaxed">
+            <p className="max-w-3xl text-base leading-relaxed md:text-lg">
               {project.summary}
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
-                <Badge key={tech} variant="secondary">
+                <Badge key={tech} variant="secondary" className="px-3 py-1">
                   {tech}
                 </Badge>
               ))}
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3 pt-2">
               {project.links.github && (
                 <Button variant="outline" asChild>
                   <a
@@ -116,60 +116,69 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="py-14 md:py-20">
-        <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-[280px_1fr]">
-          <aside className="h-fit rounded-lg border bg-card p-5 shadow-sm">
-            <p className="text-sm font-semibold">프로젝트 요약</p>
-            <dl className="mt-4 space-y-4 text-sm">
-              <div>
-                <dt className="text-muted-foreground">역할</dt>
-                <dd className="mt-1 font-medium">{project.role}</dd>
-              </div>
-              <div>
-                <dt className="text-muted-foreground">핵심 문제</dt>
-                <dd className="mt-1 leading-relaxed">{project.coreProblem}</dd>
-              </div>
-              <div>
-                <dt className="text-muted-foreground">키워드</dt>
-                <dd className="mt-2 flex flex-wrap gap-2">
-                  {project.keywords.map((keyword) => (
-                    <Badge key={keyword} variant="outline">
-                      {keyword}
-                    </Badge>
-                  ))}
-                </dd>
-              </div>
-            </dl>
-          </aside>
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-[300px_1fr] lg:gap-12">
+            <aside className="h-fit rounded-lg border bg-card p-6 shadow-sm">
+              <p className="text-sm font-semibold">프로젝트 요약</p>
+              <dl className="mt-5 space-y-5 text-sm">
+                <div>
+                  <dt className="text-muted-foreground">역할</dt>
+                  <dd className="mt-1.5 font-medium">{project.role}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">핵심 문제</dt>
+                  <dd className="mt-1.5 leading-relaxed text-muted-foreground">
+                    {project.coreProblem}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">키워드</dt>
+                  <dd className="mt-2 flex flex-wrap gap-2">
+                    {project.keywords.map((keyword) => (
+                      <Badge key={keyword} variant="outline">
+                        {keyword}
+                      </Badge>
+                    ))}
+                  </dd>
+                </div>
+              </dl>
+            </aside>
 
-          <div className="space-y-6">
-            {detailSections.map((section) => {
-              const content = project.detail[section.key];
+            <div className="space-y-6">
+              {detailSections.map((section) => {
+                const content = project.detail[section.key];
 
-              return (
-                <Card key={section.key} className="border-0 shadow-sm">
-                  <CardHeader>
-                    <CardTitle>{section.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    {Array.isArray(content) ? (
-                      <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
-                        {content.map((item) => (
-                          <li key={item} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {content}
-                      </p>
-                    )}
-                  </CardContent>
-                </Card>
-              );
-            })}
+                return (
+                  <Card
+                    key={section.key}
+                    className="border bg-card shadow-sm"
+                  >
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg font-semibold">
+                        {section.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      {Array.isArray(content) ? (
+                        <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+                          {content.map((item) => (
+                            <li key={item} className="flex gap-3">
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {content}
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
