@@ -7,24 +7,26 @@ import { projects } from "@/lib/portfolio-data";
 
 export function ProjectsOverview() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto">
+    <section className="py-24 md:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">프로젝트</h2>
-          <p className="mt-4 text-muted-foreground">
+          <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+            프로젝트
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground md:text-lg">
             메인: 5개 프로젝트 요약. 상세 페이지: 문제 상황, 판단 근거,
             트러블슈팅 분리 서술.
           </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
           {projects.map((project) => (
             <Card
               key={project.slug}
-              className="flex flex-col border-0 shadow-sm"
+              className="flex flex-col border bg-card shadow-sm transition-shadow hover:shadow-md"
             >
-              <CardHeader className="space-y-4">
+              <CardHeader className="space-y-4 pb-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge>{project.type}</Badge>
+                  <Badge className="font-medium">{project.type}</Badge>
                   <span className="text-sm text-muted-foreground">
                     {project.period}
                   </span>
@@ -33,19 +35,21 @@ export function ProjectsOverview() {
                   </span>
                 </div>
                 <div>
-                  <CardTitle className="text-2xl">{project.title}</CardTitle>
+                  <CardTitle className="text-xl sm:text-2xl">
+                    {project.title}
+                  </CardTitle>
                   <p className="mt-2 text-sm text-muted-foreground">
                     {project.subtitle}
                   </p>
                 </div>
               </CardHeader>
-              <CardContent className="flex flex-1 flex-col gap-6">
+              <CardContent className="flex flex-1 flex-col gap-6 pt-0">
                 <div className="space-y-4">
                   <p className="text-sm font-medium leading-relaxed">
                     {project.summary}
                   </p>
-                  <div className="rounded-md border bg-muted/30 p-4">
-                    <p className="text-xs font-semibold uppercase text-muted-foreground">
+                  <div className="rounded-lg border bg-section-alt p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                       Core Problem
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -73,7 +77,7 @@ export function ProjectsOverview() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                <div className="mt-auto flex flex-wrap gap-3 pt-4">
                   <Button asChild>
                     <Link href={`/projects/${project.slug}`}>
                       상세 보기

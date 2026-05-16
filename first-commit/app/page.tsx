@@ -9,9 +9,9 @@ import { TechStack } from "@/components/sections/tech-stack";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="flex flex-col">
         <Hero />
         <Highlights />
         <ProjectsOverview />
