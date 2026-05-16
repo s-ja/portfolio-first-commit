@@ -19,9 +19,14 @@ export function CareerSummary() {
                     <BriefcaseBusiness className="h-4 w-4" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl">{item.title}</CardTitle>
+                    <CardTitle className="text-xl">
+                      {item.organization} {item.title}
+                    </CardTitle>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      {item.meta}
+                      {item.role}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {item.period}
                     </p>
                   </div>
                 </div>
