@@ -1,25 +1,25 @@
-import { Header } from "@/components/header";
-import { Hero } from "@/components/hero";
-import { CoreCompetencies } from "@/components/core-competencies";
-import { TechStack } from "@/components/tech-stack";
-import { Projects } from "@/components/projects";
-import { Education } from "@/components/education";
-import { Experience } from "@/components/experience";
-import { Certifications } from "@/components/certifications";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import { CareerSummary } from "@/components/sections/career-summary";
+import { EducationAndCredentials } from "@/components/sections/education-and-credentials";
+import { Hero } from "@/components/sections/hero";
+import { Highlights } from "@/components/sections/highlights";
+import { ProjectsOverview } from "@/components/sections/projects-overview";
+import { TechStack } from "@/components/sections/tech-stack";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="flex flex-col">
         <Hero />
-        <CoreCompetencies />
+        <Highlights />
+        <ProjectsOverview />
         <TechStack />
-        <Projects />
-        <Education />
-        <Experience />
-        <Certifications />
+        <CareerSummary />
+        <EducationAndCredentials />
       </main>
+      <Footer />
     </div>
   );
 }
