@@ -13,16 +13,13 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-start">
           <span className="text-lg font-semibold tracking-tight">
-            First Commit
+            Portfolio: First Commit
           </span>
-          <span className="text-xs text-muted-foreground">Portfolio</span>
+          <span className="text-xs text-muted-foreground">새로운 시작</span>
         </div>
         <nav className="flex items-center gap-1">
           <Button variant="ghost" size="icon" asChild>
-            <a
-              href={`mailto:${contact.email}`}
-              aria-label="이메일 보내기"
-            >
+            <a href={`mailto:${contact.email}`} aria-label="이메일 보내기">
               <Mail className="h-4 w-4" />
             </a>
           </Button>

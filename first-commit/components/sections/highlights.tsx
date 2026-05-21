@@ -10,11 +10,10 @@ export function Highlights() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-            핵심 강점
+            Core Competencies
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            이력서 역량 목록의 반복 대신, 프로젝트에서 검증 가능한 작업 기준
-            3개로 압축
+            핵심 역량
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
@@ -38,7 +37,7 @@ export function Highlights() {
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {highlight.summary}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1.5">
                     {highlight.points.map((point) => (
                       <li
                         key={point}

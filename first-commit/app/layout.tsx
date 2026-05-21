@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/app/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -13,9 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "안승지 | Frontend Developer",
-  description:
-    "프론트엔드 개발자 안승지의 포트폴리오입니다. React, Next.js, TypeScript, Vue3 기반 프로젝트 경험을 소개합니다.",
+  title: "안승지 Portfolio - First Commit",
+  description: "프론트엔드 개발자 안승지 포트폴리오",
   keywords: [
     "프론트엔드",
     "개발자",
@@ -27,8 +26,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "안승지" }],
   openGraph: {
-    title: "안승지 | Frontend Developer",
-    description: "프론트엔드 개발자 안승지의 포트폴리오",
+    title: "안승지 Portfolio - First Commit",
+    description: "프론트엔드 개발자 안승지 포트폴리오",
     type: "website",
   },
 };
@@ -49,9 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" suppressHydrationWarning className="bg-background">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-      >
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

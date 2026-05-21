@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} - 안승지 포트폴리오`,
+    title: `${project.title} - First Commit`,
     description: project.summary,
   };
 }
@@ -87,6 +87,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               ))}
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
+              {project.links.service && (
+                <Button variant="outline" asChild>
+                  <a
+                    href={project.links.service}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Service
+                  </a>
+                </Button>
+              )}
               {project.links.github && (
                 <Button variant="outline" asChild>
                   <a
@@ -150,10 +162,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 const content = project.detail[section.key];
 
                 return (
-                  <Card
-                    key={section.key}
-                    className="border bg-card shadow-sm"
-                  >
+                  <Card key={section.key} className="border bg-card shadow-sm">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-lg font-semibold">
                         {section.title}

@@ -6,33 +6,35 @@ export const contact = {
 
 export const highlights = [
   {
-    title: "프론트엔드 사용성을 고려한 데이터 UI 구조화",
+    title: "UI/UX & Design",
     summary:
-      "다량의 테이블, 승인 상태, 권한 정보를 사용자 판단 순서에 맞게 분리·재배치",
+      "디자인 전공 배경을 통한 UI 디자인 이해와 사용성을 중심으로 한 데이터 화면 구조화 능력",
     points: [
-      "목록과 상세 정보의 노출 우선순위 분리",
-      "운영자 의사결정 흐름 기준의 화면 단위 구성",
-      "상태 전환과 예외 케이스의 UI 명확화",
+      "디자인 시안에 포함되어 있지 않은 디테일 까지도 사용성을 중심으로 놓치지 않고 구현",
+      "다량의 데이터 테이블(리스트) UI의 사용성과 시인성을 고려한 개선 경험",
+      "전달된 디자인 시안에 대한 분석을 바탕으로한 재사용성과 확장성을 고려한 컴포넌트 구성 경험",
+      "교육 프로젝트에서 개발 팀 리드로서, 디자인 팀과의 협업을 통한 프로젝트 진행 경험",
     ],
   },
   {
-    title: "제약 기반 기술 선택 및 연동 구조 구성",
-    summary:
-      "호스팅, API 명세, 일정 제약을 기준으로 실행 가능한 프론트엔드·API 연결 구조 설계",
+    title: "Frontend Development",
+    summary: "프로젝트 단위 개발 경험을 통한 요구사항 분석과 개발 능력",
     points: [
-      "정적 호스팅과 서버리스 함수 조합",
-      "외부 API 생명주기 검증",
-      "클라이언트 키 노출 방지 구조",
+      "토큰 갱신, 에러 처리, 비동기 상태 관리 등을 포함한 안정적인 사용자 흐름 구현 경험",
+      "프레임워크와 라이브러리에 한정되지 않고, 프로젝트 요구사항을 기반으로 선택, 적용, 빠른 적응 능력",
+      "화면 안의 문제를, 프론트엔드 단에서 한정하지 않고, 백엔드, 데이터베이스, 서버 등 필요 시 화면 밖까지 추적하고 해결하는 능력",
+      "Claude Code 및 Cursor IDE 를 활용한 개발 생산성 향상 경험",
     ],
   },
   {
-    title: "협업 가능한 개발 환경 구축",
+    title: "Teamwork & Cooperation",
     summary:
-      "팀 단위 개발에서 코드 기준, 배포 흐름, 문서화 체계를 먼저 정리하는 작업 방식",
+      "팀 단위 개발에서 코드 기준, 배포 흐름, 문서화 체계를 먼저 정리하는 작업 방식과 팀원 간 원활한 소통과 협업 능력",
     points: [
-      "PR·이슈 기반 협업 흐름",
-      "GitHub Actions 배포 자동화",
-      "README·Wiki 중심 의사결정 기록",
+      "Github Issues & Pull Requests 기반 팀 리딩 경험을 통한 프로젝트 단위 협업 이해",
+      "GitHub Actions + Vercel 을 이용한 배포 자동화 흐름 구성 경험",
+      "README/Wiki 중심 회의와 의사결정 기록을 통한 팀원 간 원활한 소통과 협업 경험",
+      "Agile 프로세스 기반 단기 프로젝트 경험으로 빠른 개발 주기에 대응 가능",
     ],
   },
 ];
@@ -50,11 +52,21 @@ export const techGroups = [
       "CSS3",
       "Tailwind CSS",
       "styled-components",
+      "Emotion",
+      "shadcn/ui",
+      "Material UI",
     ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Java", "Spring Boot", "MySQL", "MyBatis"],
+    items: [
+      "Node.js",
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "MongoDB Atlas",
+      "MyBatis",
+    ],
   },
   {
     category: "Libraries",
@@ -63,6 +75,7 @@ export const techGroups = [
       "Bootstrap",
       "Axios",
       "TanStack Query",
+      "Recoil",
       "React Hook Form",
     ],
   },
@@ -75,6 +88,7 @@ export const techGroups = [
       "Vercel",
       "Netlify",
       "Prettier",
+      "ESLint",
       "Husky",
     ],
   },
@@ -99,6 +113,7 @@ export type Project = {
   links: {
     github?: string;
     demo?: string;
+    service?: string;
   };
   detail: {
     context: string;
@@ -128,11 +143,13 @@ export const projects: Project[] = [
       "Bootstrap",
     ],
     summary:
-      "운영자가 사용자·신청·장비 데이터를 빠르게 판단할 수 있도록 관리자 화면의 정보 구조와 상태 흐름 재배치",
+      "비개발 인원 또한 DB에 직접 접근하지 않고도, 서비스 관리 및 대응이 가능하게끔 하는 것을 목표로 개발",
     coreProblem:
       "핵심 정보의 그리드 집중으로 인한 승인, 권한, 상세 확인 흐름의 판단 비용 증가",
     keywords: ["Admin UX", "데이터 그리드", "승인 흐름", "권한 관리"],
-    links: {},
+    links: {
+      service: "https://mpnite.com/admin",
+    },
     detail: {
       context:
         "제조 플랫폼 운영 업무의 반복 흐름: 목록 확인, 상태 판단, 승인·반려, 상세 정보 검토. 단순 CRUD보다 운영자 판단 순서에 맞는 정보 배치가 핵심 과제",
@@ -182,7 +199,9 @@ export const projects: Project[] = [
     coreProblem:
       "회사 소개 사이트에 회원·문의 기능이 추가되었으나 기존 호스팅 환경은 API 운영과 배포 확장성에 제약 존재",
     keywords: ["Serverless", "REST API", "인증 흐름", "문의 시스템"],
-    links: {},
+    links: {
+      service: "https://urbas.kr/",
+    },
     detail: {
       context:
         "단순 소개 페이지에서 회원 유형별 문의, 비회원 문의, 관리자 답변 상태 관리가 필요한 구조로 요구사항 확장",
@@ -425,7 +444,7 @@ export const experience: Experience[] = [
     period: "2023.10.23 ~ 2023.12.26",
     role: "교육생 / 팀 프로젝트 리더",
     description:
-      "프론트엔드 심화 교육 과정. React 기반 개발 흐름과 협업형 서비스 구현 역량 학습",
+      "K-디지털 수강생 대상 프론트엔드 심화 교육 과정. 팀 프로젝트 중심 협업 프로세스 경험 및 프론트엔드 개발 능력 향상 학습",
     relatedProjectSlugs: ["modi"],
     featured: true,
   },
@@ -437,7 +456,7 @@ export const experience: Experience[] = [
     role: "교육생 / 팀 프로젝트 리더",
     description:
       "React 중심 프론트엔드 프로젝트 과정. 컴포넌트 기반 UI 구현, API 연동, 상태 관리 흐름 학습",
-    featured: false,
+    featured: true,
   },
   {
     category: "교육",
@@ -446,8 +465,8 @@ export const experience: Experience[] = [
     period: "2022.11.28 ~ 2023.03.29",
     role: "교육생",
     description:
-      "프론트엔드 기초 교육 과정. HTML, CSS, JavaScript, React 기반 웹 개발 기본기 학습",
-    featured: false,
+      "프론트엔드 기초 교육 과정. 웹 접근성을 포함한 HTML, CSS, JavaScript, React 기반 웹 개발 기본기 학습",
+    featured: true,
   },
 ];
 

@@ -11,11 +11,10 @@ export function ProjectsOverview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-            프로젝트
+            Projects
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            메인: 5개 프로젝트 요약. 상세 페이지: 문제 상황, 판단 근거,
-            트러블슈팅 분리 서술.
+            주요 프로젝트 요약
           </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-3xl flex-col gap-6">
@@ -95,6 +94,18 @@ export function ProjectsOverview() {
                       <ArrowUpRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
+                  {project.links.service && (
+                    <Button variant="outline" asChild>
+                      <a
+                        href={project.links.service}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Service
+                      </a>
+                    </Button>
+                  )}
                   {project.links.github && (
                     <Button variant="outline" asChild>
                       <a
